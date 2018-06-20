@@ -1,5 +1,14 @@
 <h2>Patients</h2>
 
-<% @patients.each do |patient| %>
-  <%=  %>
-<% end %>
+<table>
+  <tr>
+    <th>Name: </th>
+    <th>Number of Appointments:</th>
+  </tr>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.name %></td>
+        <td><%= patient.appointments.count %></td>
+      </tr>
+    <% end %>
+</table>
