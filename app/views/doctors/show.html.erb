@@ -11,7 +11,7 @@
   </tr>
   <% @doctor.appointments.each do |app| %>
     <td><%= app.appointment_datetime.strftime("%B %d, %Y") %></td>
-    <td></td>
-    <td></td>
+    <td><%= app.appointment_datetime.strftime("%B %d, %Y") %></td>
+    <td><%= app.patient.name %></td>
   <% end %>
 </table>
