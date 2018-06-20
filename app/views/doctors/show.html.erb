@@ -5,13 +5,13 @@
 <h4>Appointments:</h4>
 <table>
   <tr>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Patient</th>
+    <th style="width: 180px">Date and Time</th>
+    <th style="width: 180px">Patient</th>
   </tr>
   <% @doctor.appointments.each do |app| %>
-    <td><%= app.appointment_datetime.strftime("%B %d, %Y") %></td>
-    <td></td>
-    <td></td>
+    <tr>
+      <td><%= app.appointment_datetime.strftime("%B %d, %Y") %> at <%=  app.appointment_datetime.strftime("%H:%M") %></td>
+      <td><%= link_to app.patient.name, patient_path(app.patient) %></td>
+    </tr>
   <% end %>
 </table>
