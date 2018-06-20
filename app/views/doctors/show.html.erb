@@ -5,9 +5,9 @@
 <h4>Appointments:</h4>
 <table>
   <tr>
-    <th style="width: 60px">Date</th>
-    <th style="width: 60px">Time</th>
-    <th style="width: 60px">Patient</th>
+    <th style="width: 100px">Date</th>
+    <th style="width: 100px">Time</th>
+    <th style="width: 100px">Patient</th>
   </tr>
   <% @doctor.appointments.each do |app| %>
     <td><%= app.appointment_datetime.strftime("%B %d, %Y") %></td>
