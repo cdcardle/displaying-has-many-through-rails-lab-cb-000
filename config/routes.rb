@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :patients
-  resources :doctors
-  resources :patients
+  resources :doctors, only: [:index, :show]
+  resources :patients, only: [:index, :show]
   resources :appointments, only: [:show]
+
+  root 'doctors#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
