@@ -10,8 +10,10 @@
     <th style="width: 100px">Patient</th>
   </tr>
   <% @doctor.appointments.each do |app| %>
-    <td><%= app.appointment_datetime.strftime("%B %d, %Y") %></td>
-    <td><%= app.appointment_datetime.strftime("%H:%M") %></td>
-    <td><%= app.patient.name %></td>
+    <tr>
+      <td><%= app.appointment_datetime.strftime("%B %d, %Y") %></td>
+      <td><%= app.appointment_datetime.strftime("%H:%M") %></td>
+      <td><%= app.patient.name %></td>
+    </tr>
   <% end %>
 </table>
